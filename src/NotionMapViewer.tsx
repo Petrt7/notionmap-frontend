@@ -8,7 +8,7 @@ export default function NotionMapViewer() {
     const defaultQuery = params.get("query") || "台北車站";
     const [query, setQuery] = useState(defaultQuery);
     const mapRef = useRef<HTMLDivElement>(null);
-    const mapInstance = useRef<google.maps.Map>();
+    const mapInstance = useRef<google.maps.Map | null>(null);
 
     useEffect(() => {
         const script = document.createElement("script");
